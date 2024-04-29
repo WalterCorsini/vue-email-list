@@ -10,11 +10,10 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body id="app">
-    <div v-if="arrayMail.length === 10">
-        <h1>lista di 10 email</h1>
+    <h1>lista di 10 email</h1>
+    <ol v-if="arrayMail.length === 10">
         <li v-for="curMail in arrayMail">{{curMail}}</li>
-        
-    </div>
+    </ol>
     <!-- script -->
     <script src="./js/script.js"></script>
 </body>
