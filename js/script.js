@@ -15,7 +15,6 @@ createApp({
               axios.get("https://flynn.boolean.careers/exercises/api/random/mail")
               .then((rndMail) => {
                   this.arrayMail.push(rndMail.data.response);
-                  console.log("email random", this.arrayMail);
                 });
             }
         },
