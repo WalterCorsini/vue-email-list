@@ -15,6 +15,7 @@
     <body>
         <div id="app">
             <h1>lista di 10 email</h1>
+            <div v-show="isLoading === true">caricamento...</div>
             <ol v-if="arrayMail.length === 10">
                 <li v-for="curMail in arrayMail">{{curMail}}</li>
             </ol>
