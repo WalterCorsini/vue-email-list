@@ -4,6 +4,7 @@ createApp({
   data() {
     return {
       isLoading:false,
+      isLoadingProgress: 0,
       arrayMail: [],
     };
   },
@@ -17,7 +18,10 @@ createApp({
               axios.get("https://flynn.boolean.careers/exercises/api/random/mail")
               .then((rndMail) => {
                   this.arrayMail.push(rndMail.data.response);
-                  this.isLoading=false;
+                  this.isLoadingProgress +=10;
+                  if(this.arrayMail.length === 10){
+                    this.isLoading=false;
+                  }
                 });
               }
         },
